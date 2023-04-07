@@ -141,9 +141,7 @@ const pizzaData = [
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoia2h5MjM2IiwiYSI6ImNsZzVxYTVnNDA1d2kzZW45b3l5d280N3oifQ.GqfNX5HwLaA5utEN2iQkXg';
 
-const NYC_COORDINATES = [-74.00413, 40.67024]
-
-const GOWANUS_WHOLEFOODS = [-73.98877, 40.67488]
+const NYC_COORDINATES = [-74.00888, 40.70000]
 
 const map = new mapboxgl.Map({
     container: 'map', // container ID
@@ -181,15 +179,36 @@ pizzaData.forEach(function (pizzaRecord) {
 })
 
 
-$('fly-to-beijing').on('click', function() {
-    console.log("x"),
+$('#fly-to-beijing').on('click', function () {
     map.flyTo({
-        center: [116.45822, 40.25576],
-        essential: true
+        center: [116.43731, 39.91891]
+    })
+})
+
+$('#fly-to-chicago').on('click', function () {
+    map.flyTo({
+        center: [-87.6298, 41.8781]
     })
 })
 
 
+$('#fly-to-philadelphia').on('click', function () {
+    map.flyTo({
+        center: [-75.27540655, 39.96583696]
+    })
+})
+
+$('#fly-to-charlottesville').on('click', function () {
+    map.flyTo({
+        center: [-78.4822301, 38.0310708]
+    })
+})
+
+$('#fly-to-new-york').on('click', function () {
+    map.flyTo({
+        center: [-74.000288, 40.73041]
+    })
+})
 
 
 /* DUMMY MARKERS
