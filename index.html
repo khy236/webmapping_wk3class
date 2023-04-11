@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Display a map on a webpage</title>
+    <title>Title</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
@@ -14,24 +14,31 @@
     <div id="map"></div>
 
     <div class="sidebar">
-        <div class="title">
-            Favorite pizza shops
-        </div>
+        <h1>Where's Remy (and all his friends)?</h1>
+        <p><a href='https://data.cityofnewyork.us/Social-Services/Rat-Sightings/3q43-55fe'>Rat sightings</a>
+            in
+            NYC from 2010 to present based on 311 service requests (updated daily).</p>
         <div class="description">
-            Everyone's favorite pizza shops. Red markers are from MUP students, white markers are from other programs' students.
+            <b>Zoom</b> in to see individual complaint locations.</p>
+            <p><b>Click</b> on individual complaint locations to view their address and status.</p>
         </div>
 
-        <button id="fly-to-beijing" class="button-4" role="button">Fly to Beijing</button>
-        <button id="fly-to-chicago" class="button-4" role="button">Fly to Chicago</button>
-        <button id="fly-to-charlottesville" class="button-4" role="button">Fly to Charlottesville</button>
-        <button id="fly-to-philadelphia" class="button-4" role="button">Fly to Philadelphia</button>
-        <button id="fly-to-new-york" class="button-4" role="button">Fly to New York</button>
+        <div class='legend'>
+            <h2>Sightings</h2>
+            <div class='row colors'></div>
+            <div class='row labels'>
+                    <div class='label'><50</div>
+                    <div class='label'>50 - 200</div>
+                    <div class='label'>200+</div>
+            </div>
+        </div>
 
     </div>
 
 </body>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
 
 
