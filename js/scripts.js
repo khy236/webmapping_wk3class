@@ -114,11 +114,14 @@ map.on('load', () => {
         const coordinates = e.features[0].geometry.coordinates.slice();
         const loc = e.features[0].properties.incident_address;
         const status = e.features[0].properties.status;
-        const created = e.features[0].properties.created_date.toUTCString();
-        const closed = e.features[0].properties.closed_date.toUTCString();
+        const created = new Date(e.features[0].properties.created_date);
+        var closed = e.features[0].properties.closed_date;
 
-        console.log(created);
-        console.log(closed);
+        if (closed === undefined) {
+            closed = "N/A";
+        } else {
+            closed = new Date(e.features[0].properties.closed_date);
+        }
         
         // Ensure that if the map is zoomed out such that
         // multiple copies of the feature are visible, the
